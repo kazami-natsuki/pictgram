@@ -12,4 +12,5 @@ class Topic < ApplicationRecord
 
   # 課題
   has_many :comments
+  has_many :comment_users, through: :comments, source: 'user'
 end
